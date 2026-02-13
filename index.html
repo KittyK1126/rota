@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Roster Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Doctor Roster Manager</h1>
+            <div class="controls">
+                <select id="monthSelect">
+                    <option value="0">January</option>
+                    <option value="1">February</option>
+                    <option value="2">March</option>
+                    <option value="3">April</option>
+                    <option value="4">May</option>
+                    <option value="5">June</option>
+                    <option value="6">July</option>
+                    <option value="7">August</option>
+                    <option value="8">September</option>
+                    <option value="9">October</option>
+                    <option value="10">November</option>
+                    <option value="11">December</option>
+                </select>
+                <select id="yearSelect">
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                </select>
+                <button id="generateBtn" class="btn-primary">Generate Roster</button>
+                <button id="validateBtn" class="btn-secondary">Check Rules</button>
+                <button id="clearBtn" class="btn-danger">Clear Roster</button>
+            </div>
+        </header>
+
+        <div id="calendar" class="calendar">
+            <!-- Calendar will be generated here by JavaScript -->
+        </div>
+
+        <div id="warnings" class="warnings">
+            <!-- Rule violation warnings will appear here -->
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Edit Day</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Doctor assignment editors will go here -->
+            </div>
+            <div class="modal-footer">
+                <button id="saveEdit" class="btn-primary">Save Changes</button>
+                <button id="cancelEdit" class="btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
